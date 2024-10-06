@@ -1,0 +1,214 @@
+/* Set the font and basic styles for the body */
+body {
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Style the header */
+header {
+    background: linear-gradient(135deg, #001f3f, #4b0082); /* Navy blue to purple gradient background */
+    color: #e0e0e0; /* Light text color */
+    padding: 60px 20px; /* Padding inside the header */
+    text-align: center; /* Center the text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    position: relative; /* Relative positioning */
+}
+
+/* Style the profile picture in the header */
+header .profile-pic {
+    width: 120px; /* Width of the profile picture */
+    height: 120px; /* Height of the profile picture */
+    border-radius: 50%; /* Make it a circle */
+    object-fit: cover; /* Cover the entire area */
+    border: 4px solid #e0e0e0; /* Light border */
+    position: absolute; /* Absolute positioning */
+    top: 20px; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to center */
+}
+
+/* Style the navigation bar */
+nav {
+    position: absolute; /* Position the nav bar */
+    top: 20px; /* Position from the top */
+    right: 20px; /* Position from the right */
+}
+
+nav ul {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Display items in a row */
+    gap: 15px; /* Space between items */
+}
+
+/* Style the list items in the navigation bar */
+nav ul li {
+    display: inline-block; /* Display inline */
+}
+
+/* Style the links in the navigation bar */
+nav ul li a {
+    color: #e0e0e0; /* Light text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Padding inside the links */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    font-weight: bold; /* Bold text */
+}
+
+/* Style the links on hover */
+nav ul li a:hover {
+    background-color: rgba(44, 62, 80, 0.8); /* Darker background on hover */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Add a shadow */
+}
+
+/* Style the sections */
+section {
+    padding: 30px 20px; /* Padding inside the section */
+    margin: 20px auto; /* Center the section */
+    background-color: #1e1e1e; /* Dark background */
+    border-radius: 12px; /* Rounded corners */
+    max-width: 800px; /* Maximum width */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a shadow */
+}
+
+/* Style the headings */
+h2 {
+    color: #e0e0e0; /* Light text color */
+    border-bottom: 2px solid #444; /* Bottom border */
+    padding-bottom: 10px; /* Padding below the text */
+    font-size: 1.8em; /* Font size */
+}
+
+/* Style the footer */
+footer {
+    text-align: center; /* Center the text */
+    padding: 15px; /* Padding inside the footer */
+    background-color: #001f3f; /* Navy blue background */
+    color: #e0e0e0; /* Light text color */
+    position: fixed; /* Fixed position at the bottom */
+    width: 100%; /* Full width */
+    bottom: 0; /* Position at the bottom */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow */
+}
+
+/* Style the main heading in the header */
+header h1 {
+    font-size: 2.5em; /* Font size */
+    margin: 0; /* Remove margin */
+    margin-top: 140px; /* Margin from the top */
+}
+
+/* Style the paragraph in the header */
+header p {
+    font-size: 1.2em; /* Font size */
+    margin: 10px 0 0; /* Margin */
+}
+
+/* Set font size for navigation links */
+nav ul li a {
+    font-size: 1em; /* Font size */
+}
+
+/* Style the paragraphs in the "about" section */
+section#about p {
+    font-size: 1.1em; /* Font size */
+    line-height: 1.6; /* Line height */
+    text-align: justify; /* Justify text */
+}
+
+/* Style the project sections */
+.project {
+    margin-bottom: 30px; /* Bottom margin */
+    padding: 20px; /* Padding inside the project */
+    background-color: #2c2c2c; /* Dark background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow */
+}
+
+/* Style the project images */
+.project img {
+    max-width: 100%; /* Maximum width */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 15px; /* Bottom margin */
+}
+
+/* Style the project headings */
+.project h3 {
+    font-size: 1.5em; /* Font size */
+    margin-bottom: 10px; /* Bottom margin */
+}
+
+/* Style the project paragraphs */
+.project p {
+    font-size: 1.1em; /* Font size */
+    line-height: 1.6; /* Line height */
+    margin-bottom: 15px; /* Bottom margin */
+}
+
+/* Style the project links */
+.project a {
+    font-size: 1.1em; /* Font size */
+    color: #1e88e5; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Style the project links on hover */
+.project a:hover {
+    color: #1565c0; /* Change color on hover */
+}
+
+/* Style the footer paragraph */
+footer p {
+    font-size: 1em; /* Font size */
+    margin: 0; /* Remove margin */
+}
+
+/* Style the iframes */
+iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Border */
+    width: 100%; /* Full width */
+    max-width: 800px; /* Maximum width */
+    height: 450px; /* Height */
+    margin: 20px auto; /* Center with margin */
+    display: block; /* Block display */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding: 40px 10px; /* Adjust padding */
+    }
+
+    header h1 {
+        font-size: 2em; /* Adjust font size */
+        margin-top: 100px; /* Adjust margin */
+    }
+
+    header .profile-pic {
+        width: 100px; /* Adjust width */
+        height: 100px; /* Adjust height */
+    }
+
+    section {
+        padding: 20px 10px; /* Adjust padding */
+    }
+
+    .project {
+        padding: 15px; /* Adjust padding */
+    }
+}
+
+/* Accessibility Improvements */
+nav ul li a:focus,
+nav ul li a:hover {
+    outline: 2px solid #e0e0e0; /* Add outline */
+    outline-offset: 2px; /* Offset outline */
+}
