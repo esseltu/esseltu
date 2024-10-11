@@ -20,7 +20,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <section id="about">
+    <section id="about" class="scroll-animation">
         <h2>About Me</h2>
         <p>Hello! I am Kwesi Essel Turkson, a dedicated UI designer with a passion for creating aesthetically pleasing and user-friendly interfaces.
              While I am a beginner in the field of UI design, I am highly motivated and eager to contribute my skills to meaningful projects. 
@@ -28,7 +28,7 @@
               I believe in simplifying complex problems to achieve efficient solutions.
              Additionally, I am keen on gaining practical, real-world experience in UI design to further enhance my expertise.</p>
     </section>
-    <section id="skills">
+    <section id="skills" class="scroll-animation">
         <h2>Skills</h2>
         <h3>Design Skills:</h3>
         <ul>
@@ -54,7 +54,7 @@
             <li><strong>MySQL Database:</strong> Basic knowledge of MySQL database management and queries.</li>
         </ul>
     </section>
-    <section id="projects">
+    <section id="projects" class="scroll-animation">
         <h2>Projects</h2>
         <div class="project">
             <h3>Edems Mart</h3>
@@ -76,7 +76,7 @@
             <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/nsywkgJJMtxqEfbesXUb15/Kobby-project?node-id=0-1&embed-host=share" allowfullscreen></iframe>
             <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/ZAvKEaQ6GX31mkjYXoDuYf/first-project?node-id=0-1&embed-host=share" allowfullscreen></iframe>
         </div>
-        <div class="project">
+        <div class="project" class="scroll-animation">
             <h3>Find A Vendor</h3>
             <h4>Mobile App</h4>
             <p>Description: The Mobile Money Vendor Locator is a user-friendly application designed to help individuals find mobile money vendors in their vicinity with ease. This project aims to bridge the gap between users and mobile money services by providing a seamless and efficient way to locate vendors based on their current location.</p>
@@ -94,14 +94,50 @@
         </div>
     </section>
     
-    <section id="contact">
+    <section id="contact" class="scroll-animation">
         <h2>Contact</h2>
-        <p>Email: esselturkson1@gmail.com</p>
-        <p>WhatsApp Numbers: 0544130026 </p>
-        <p>WhatsApp Business: 0507006873</p>
+        <p>If you have any questions or would like to get in touch, feel free to contact me through the following methods:</p>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:esselturkson1@gmail.com">esselturkson1@gmail.com</a></p>
+            <p><strong>WhatsApp Numbers:</strong> <a href="tel:+233544130026">0544130026</a></p>
+            <p><strong>WhatsApp Business:</strong> <a href="tel:+233507006873">0507006873</a></p>
+        </div>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+      
     </section>
+    
+    
     <footer>
         <p>© 2024 Kwesi Essel Turkson. All rights reserved.</p>
     </footer>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.scroll-animation');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-animation-visible');
+                }
+            });
+        });
+
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+</script>
+
 </html>
