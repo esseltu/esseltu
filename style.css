@@ -333,21 +333,6 @@ main {
     font-size: 0.8rem;
 }
 
-.form-status {
-    margin-top: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    min-height: 24px;
-}
-
-.form-status.success {
-    color: #008000;
-}
-
-.form-status.error {
-    color: #cc0000;
-}
-
 /* FOOTER */
 footer {
     background-color: var(--text-color);

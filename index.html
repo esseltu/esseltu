@@ -117,7 +117,11 @@
             <h2 class="section-title">CONTACT</h2>
             <div class="content-block">
                 <p class="large-text">Ready to start a project? Get in touch.</p>
-                <form id="contact-form" class="contact-form">
+                <form action="https://formsubmit.co/esselturkson1@gmail.com" method="POST" class="contact-form">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Portfolio Contact!">
+                    <input type="hidden" name="_captcha" value="false">
+                    
                     <div class="form-group">
                         <label for="name">NAME</label>
                         <input type="text" id="name" name="name" placeholder="ENTER YOUR NAME" required>
@@ -132,7 +136,6 @@
                     </div>
                     <button type="submit" class="btn-large">SEND MESSAGE</button>
                 </form>
-                <p id="form-status" class="form-status"></p>
             </div>
         </section>
     </main>
@@ -140,53 +143,5 @@
     <footer>
         <p>&copy; 2024 KWESI ESSEL TURKSON. ALL RIGHTS RESERVED.</p>
     </footer>
-
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const status = document.getElementById('form-status');
-            const submitBtn = this.querySelector('button[type="submit"]');
-            
-            // Disable button and show loading state
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'SENDING...';
-            status.textContent = '';
-            status.className = 'form-status';
-
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
-
-            try {
-                const response = await fetch('/api/send-email', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                const result = await response.json();
-
-                if (response.ok) {
-                    status.textContent = 'MESSAGE SENT SUCCESSFULLY!';
-                    status.classList.add('success');
-                    this.reset();
-                } else {
-                    throw new Error(result.error || 'Failed to send message');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                status.textContent = 'ERROR SENDING MESSAGE. PLEASE TRY AGAIN.';
-                status.classList.add('error');
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'SEND MESSAGE';
-            }
-        });
-    </script>
 </body>
 </html>
